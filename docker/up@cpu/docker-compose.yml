@@ -1,0 +1,16 @@
+
+
+services:
+  convert-to-rkllm-gradio:
+    image: xiaoyao9184/convert-to-rkllm:main
+    environment:
+      - SPACE_AUTHOR_NAME=xiaoyao9184
+    ports:
+      - "7860:7860"
+    volumes:
+      # - ./../../cache:/root/.cache
+      # - ./../../models:/root/.rkllm-build/models
+      # - ./../../logs:/root/.rkllm-build/logs
+      - $HOME/.cache:/root/.cache
+      - $HOME/.rkllm-build/models:/root/.rkllm-build/models
+      - $HOME/.rkllm-build/logs:/root/.rkllm-build/logs
