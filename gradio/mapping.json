@@ -1,0 +1,138 @@
+{
+    "RK3588": {
+        "rk3588-3npu-w8a8": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3588",
+            "num_npu_core": 3,
+            "quantized_dtype": "W8A8",
+            "quantized_algorithm": "normal",
+            "max_context": 4096
+        },
+        "rk3588-3npu-w8a8_g128": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3588",
+            "num_npu_core": 3,
+            "quantized_dtype": "W8A8_G128",
+            "quantized_algorithm": "normal",
+            "max_context": 4096
+        },
+        "rk3588-3npu-w8a8_g256": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3588",
+            "num_npu_core": 3,
+            "quantized_dtype": "W8A8_G256",
+            "quantized_algorithm": "normal",
+            "max_context": 4096
+        },
+        "rk3588-3npu-w8a8_g512": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3588",
+            "num_npu_core": 3,
+            "quantized_dtype": "W8A8_G512",
+            "quantized_algorithm": "normal",
+            "max_context": 4096
+        }
+    },
+    "RK3576": {
+        "rk3576-2npu-w8a8": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3576",
+            "num_npu_core": 2,
+            "quantized_dtype": "w8a8",
+            "quantized_algorithm": "normal",
+            "max_context": 4096
+        },
+        "rk3576-2npu-w4a16": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3576",
+            "num_npu_core": 2,
+            "quantized_dtype": "w4a16",
+            "quantized_algorithm": "grq",
+            "max_context": 4096
+        },
+        "rk3576-2npu-w4a16_g32": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3576",
+            "num_npu_core": 2,
+            "quantized_dtype": "w4a16_g32",
+            "quantized_algorithm": "grq",
+            "max_context": 4096
+        },
+        "rk3576-2npu-w4a16_g64": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3576",
+            "num_npu_core": 2,
+            "quantized_dtype": "w4a16_g64",
+            "quantized_algorithm": "grq",
+            "max_context": 4096
+        },
+        "rk3576-2npu-w4a16_g128": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3576",
+            "num_npu_core": 2,
+            "quantized_dtype": "w4a16_g128",
+            "quantized_algorithm": "grq",
+            "max_context": 4096
+        }
+    },
+    "RK3562": {
+        "rk3562-1npu-w8a8": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3562",
+            "quantized_dtype": "W8A8",
+            "quantized_algorithm": "normal",
+            "num_npu_core": 1,
+            "max_context": 4096
+        },
+        "rk3562-1npu-w4a16_g32": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3562",
+            "num_npu_core": 1,
+            "quantized_dtype": "W4A16_G32",
+            "quantized_algorithm": "grq",
+            "max_context": 4096
+        },
+        "rk3562-1npu-w4a16_g64": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3562",
+            "num_npu_core": 1,
+            "quantized_dtype": "W4A16_G64",
+            "quantized_algorithm": "grq",
+            "max_context": 4096
+        },
+        "rk3562-1npu-w4a16_g128": {
+            "dataset": "./data_quant.json",
+            "qparams": null,
+            "optimization_level": 1,
+            "target_platform": "RK3562",
+            "num_npu_core": 1,
+            "quantized_dtype": "W4A16_G128",
+            "quantized_algorithm": "grq",
+            "max_context": 4096
+        }
+    }
+}
