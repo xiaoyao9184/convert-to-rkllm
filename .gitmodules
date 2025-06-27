@@ -1,0 +1,3 @@
+[submodule "rknn-llm"]
+	path = rknn-llm
+	url = https://github.com/airockchip/rknn-llm.git
