@@ -1,0 +1,6 @@
+cache/
+models/
+logs/
+test/
+# Ignore generated files
+**/*.pyc

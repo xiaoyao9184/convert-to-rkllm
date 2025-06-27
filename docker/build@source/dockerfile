@@ -1,0 +1,30 @@
+
+FROM pytorch/pytorch:2.7.0-cuda12.6-cudnn9-runtime
+
+WORKDIR /app
+
+# RUN apt-get update && apt-get install -y \
+#     libstdc++6 \
+#     && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install --upgrade pip
+
+COPY ./gradio/requirements.txt /workspace/gradio/requirements.txt
+RUN pip3 install --no-cache-dir \
+    -r /workspace/gradio/requirements.txt
+
+COPY ./gradio /workspace/gradio
+WORKDIR /workspace/gradio
+
+
+EXPOSE 7860
+
+VOLUME /root/.cache
+VOLUME /root/.rkllm-build
+
+ENV HUGGINGFACE_HUB_CACHE=/root/.cache/huggingface/hub
+ENV OUTPUT_DIR=/root/.rkllm-build/models/
+ENV LOG_DIR=/root/.rkllm-build/logs/
+ENV DATASET_JSON=/workspace/gradio/dataset.json
+
+CMD ["gradio", "app.py"]
