@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "gradio: run app",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/gradio/run.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "${workspaceFolder}/gradio/app.py"
+            ],
+            "env": {
+                "SPACE_AUTHOR_NAME": "xiaoyao9184",
+                // "LD_LIBRARY_PATH": "${env:CONDA_ROOT}/lib:${env:LD_LIBRARY_PATH}",
+                // "LD_PRELOAD": "${env:CONDA_ROOT}/lib/libstdc++.so.6",
+                "HUGGINGFACE_HUB_CACHE": "${env:HOME}/.cache/huggingface/hub",
+                "OUTPUT_DIR": "${env:HOME}/.rkllm-build/models/",
+                "DATASET_JSON": "${workspaceFolder}/rknn-llm/examples/DeepSeek-R1-Distill-Qwen-1.5B_Demo/export/data_quant.json",
+                "IGNORE_CONVERTED": "true",
+                "IGNORE_ERRORS": "true"
+            },
+            "justMyCode": false
+        }
+    ]
+}

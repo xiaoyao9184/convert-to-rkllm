@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "docker: compose up@cpu",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/docker/up@cpu/"
+            },
+            "command": "docker compose -p convert-to-rkllm up"
+        },
+        {
+            "label": "docker: build main",
+            "type": "shell",
+            "command": "docker build -t xiaoyao9184/convert-to-rkllm:main -f ./docker/build@source/dockerfile ."
+        },
+        {
+            "label": "huggingface-cli: download qwen models",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    // "HF_ENDPOINT": "https://hf-mirror.com",
+                    // "HF_HUB_ETAG_TIMEOUT": "1000",
+                    // "HF_HUB_DOWNLOAD_TIMEOUT": "1000"
+                }
+            },
+            "command": [
+                "huggingface-cli download Qwen/Qwen2.5-0.5B-Instruct",
+            ]
+        },
+        {
+            "label": "copy: dataset.json",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": [
+                "cp",
+                "./rknn-llm/examples/DeepSeek-R1-Distill-Qwen-1.5B_Demo/export/data_quant.json",
+                "./gradio/dataset.json"
+            ]
+        },
+        {
+            "label": "conda: create env",
+            "type": "shell",
+            "command": [
+                "conda env create -f ./environment.yml"
+            ]
+        }
+    ]
+}
