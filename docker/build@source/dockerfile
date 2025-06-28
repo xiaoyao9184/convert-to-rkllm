@@ -9,9 +9,9 @@ WORKDIR /app
 
 RUN pip3 install --upgrade pip
 
-COPY ./gradio/requirements.txt /workspace/gradio/requirements.txt
 RUN pip3 install --no-cache-dir \
-    -r /workspace/gradio/requirements.txt
+    gradio==5.34.2 \
+    https://github.com/airockchip/rknn-llm/raw/refs/tags/release-v1.2.1/rkllm-toolkit/rkllm_toolkit-1.2.1-cp311-cp311-linux_x86_64.whl
 
 COPY ./gradio /workspace/gradio
 WORKDIR /workspace/gradio
