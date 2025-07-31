@@ -1,3 +1,6 @@
 gradio==5.34.2
 
 https://github.com/airockchip/rknn-llm/raw/refs/tags/release-v1.2.1/rkllm-toolkit/rkllm_toolkit-1.2.1-cp310-cp310-linux_x86_64.whl
+
+# fix AttributeError: module 'pyarrow' has no attribute 'PyExtensionType'. Did you mean: 'ExtensionType'?
+pyarrow<=20.0.0
